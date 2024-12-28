@@ -1,0 +1,249 @@
+/* Geral */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+body {
+  background-image: url("/img/background-image.avif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background-color: #f5f5f5;
+  transition: background 0.3s ease;
+}
+
+button {
+  background-color: #fdfdfd;
+  color: #102f5e;
+  border: 2px solid #102f5e;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #102f5e;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+button:hover > i {
+  color: #fff;
+}
+
+button i {
+  pointer-events: none;
+  color: #102f5e;
+  font-weight: bold;
+}
+
+input,
+select {
+  padding: 0.25rem 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #102f5e;
+  outline: none;
+}
+
+.hide {
+  display: none;
+}
+
+/* Todo Header */
+.todo-container {
+  max-width: 500px;
+  margin: 3rem auto 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.todo-container header {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+.todo-container header h1 {
+  font-size: 2.2rem;
+  color: #102f5e;
+  font-weight: 700;
+}
+
+/* Todo Form */
+#todo-form,
+#edit-form {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#todo-form p,
+#edit-form p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #102f5e;
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-control input {
+  margin-right: 0.5rem;
+  padding: 0.8rem;
+  width: 85%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#cancel-edit-btn {
+  margin-top: 1rem;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#cancel-edit-btn:hover {
+  background-color: #ccc;
+}
+
+/* Todo Toolbar */
+#toolbar {
+  padding: 1.2rem;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#toolbar h4 {
+  margin-bottom: 0.5rem;
+  color: #102f5e;
+}
+
+#search {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+#search form {
+  display: flex;
+  align-items: center;
+}
+
+#search input {
+  width: 100%;
+  margin-right: 0.5rem;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#search button {
+  padding: 0.5rem;
+  background-color: #102f5e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#search button:hover {
+  background-color: #102f5e;
+  transform: translateY(-2px);
+}
+
+#filter {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+#filter select {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Todo List */
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.todo h3 {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.todo button {
+  margin-left: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 2px solid #f0f0f0;
+}
+
+.todo button:hover {
+  background-color: #102f5e;
+  color: #fff;
+  border-color: #102f5e;
+}
+
+.done {
+  background: #7aa6a3;
+}
+
+.done h3 {
+  color: #fff;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.finished {
+  background-color: #5c9b8f;
+}
+
+.finished h3 {
+  text-decoration: line-through;
+  color: #fff;
+  font-style: italic;
+}
